@@ -5,14 +5,32 @@
 	
 	display: grid;
 	place-items: center;
+	
+	overflow: hidden;
+	position: absolute;
 }
 
-.side .title {
-	color: white;
+#lor {
+	color: black;
 	font-family: Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, 'serif';
 	fontsize: 8vw;
 	margin: 0px 15vw;
 	width: 70vw;
-}body {
-	background-color: #57A5B8;
+}
+
+#hof {
+	color: black;
+	font-family: Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, 'serif';
+	fontsize: 8vw;
+	margin: 0px 15vw;
+	width: 70vw;
+}
+
+#left-side {
+	background-color: aliceblue;
+	z-index: 2;
+}
+
+#right-side {
+	background-color: aquamarine;
 }

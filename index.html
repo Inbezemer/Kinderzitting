@@ -3,20 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <title>Twister</title>
-<link href="main.css" rel="stylesheet" type="text/css">
+<link href="CSS/main.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 	<div id="left-side" class="side">
-		<h2 class="title">
+		<h2 id="lor" class="title">
 		Left
 		</h2>
 	</div>
 	<div id="right-side" class="side">
-		<h2 class="title">
+		<h2 id="hof" class="title">
 		Hand
 		</h2>
 	</div>
+	
+	<script>
+		const left - document.getElementById("left-side");
+		
+		const handleOnMove = e => {
+			const p = e.clientX / window.innerWidth * 100;
+			
+			left.style.width = `${p}%`
+		}
+		
+		document.onmousemove = e => handleOnMove(e);
+	</script>
 </body>
 </html>
+
+
 
