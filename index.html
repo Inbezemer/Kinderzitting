@@ -9,7 +9,7 @@
 <body>
 	<div id="left-side" class="side">
 		<h2 id="lor">Linker</h2>
-		<h2 id="hof">Voet</h2>
+		<h2 id="hof">Voot</h2>
 	</div>
 	<div id="right-side" class="side"></div>
 	
@@ -72,7 +72,7 @@
 			if (a==0) lor.innerHTML = "Linker"; else lor.innerHTML = "Rechter";
 			
 			let b = Math.floor(Math.random() * 2);
-			if (b==0) hof.innerHTML = "Hand"; else hof.innerHTML = "Voet";
+			if (b==0) hof.innerHTML = "Handj"; else hof.innerHTML = "Voot";
 		}
 		
 		function Swipe() {
@@ -88,16 +88,16 @@
 			
 			switch (col) {
 				case 0:
-					right.style.backgroundColor = "red";
+					right.style.backgroundColor = "#FF968A"; //red
 					break;
 				case 1:
-					right.style.backgroundColor = "blue";
+					right.style.backgroundColor = "#55CBCD"; //blue
 					break;
 				case 2:
-					right.style.backgroundColor = "yellow";
+					right.style.backgroundColor = "#ffee93"; //yellow
 					break;
 				case 3:
-					right.style.backgroundColor = "green";
+					right.style.backgroundColor = "#adf7b6"; //green
 					break;
 			}
 			
