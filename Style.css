@@ -10,14 +10,14 @@ h2  {
 /*    transform: rotate(-90deg);*/
 /*	position: absolute;*/
 /*	left: 30vw;*/
-/*	margin-top: 30vh;*/
+	margin-top: 30vh;
 }
 #hof {
     text-align: center;
 /*    transform: rotate(-90deg);*/
 /*	position: absolute;*/
 /*	right: 30vw;*/
-/*	margin-bottom: 30vh; */
+	margin-bottom: 30vh;
 }
 
 .side {
