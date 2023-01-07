@@ -7,9 +7,11 @@
 </head>
 
 <body>
+	<div class="text">
+		<h2 class="title" id="lor">Linker</h2>
+		<h2 class="title" id="hof">Voot</h2>
+	</div>
 	<div id="left-side" class="side">
-		<h2 id="lor">Linker</h2>
-		<h2 id="hof">Voot</h2>
 	</div>
 	<div id="right-side" class="side"></div>
 	
@@ -20,35 +22,9 @@
 		const hof = document.getElementById("hof");
 		const left = document.getElementById("left-side");
 		const right = document.getElementById("right-side");
-		
-//		const transition = document.querySelector('.transition');
-//		
-//		transition.ontransitionend = () => {
-//			transitioned = true;
-//			left.style.backgroundColor = right.style.backgroundColor;
-//			left.style.width = "100%";
-//		};
-		
-//		const transition = document.querySelector('.transition');
-//
-//		transition.addEventListener('transitionend', () => {
-//  		if (!transitioned) {
-//			left.style.backgroundColor = right.style.backgroundColor;
-//			left.style.width = "100%";
-//			transitioned = true;
-//		}
-//		});
-
-		
+			
 		let col = 0;
 		let currentCol = 0;
-		
-//		document.addEventListener('mousemove', (e) => {
-//			x = e.clientX / window.innerWidth * 100;
-//			document.getElementById("left-side").style.width = `${x}%`;
-//			document.getElementById("lor").style.fontSize = `${x}px`;
-//			
-//		})
 		
 		document.addEventListener('keydown', (e) => {
 			if (event.isComposing || event.keyCode === 229) {
@@ -59,11 +35,19 @@
 				left.style.backgroundColor = right.style.backgroundColor;
 				left.style.transitionProperty = "none";
 				left.style.width = "100%";
+				lor.style.opacity = "0";
+				hof.style.opacity = "0";
 				setTimeout(function(){
-					newValues();
 					newColor();
 					Swipe();
-				},100);
+				},200);
+				setTimeout(function(){
+					newValues();
+					lor.style.opacity = "1";
+				},1000);
+				setTimeout(function(){
+					hof.style.opacity = "1";
+				},1500);
 			}
 		});
 		
@@ -89,15 +73,23 @@
 			switch (col) {
 				case 0:
 					right.style.backgroundColor = "#FF968A"; //red
+					lor.style.color = "#071F3E";
+					hof.style.color = "#071F3E";
 					break;
 				case 1:
-					right.style.backgroundColor = "#55CBCD"; //blue
+					right.style.backgroundColor = "#1ea3a6"; //blue
+					lor.style.color = "#ffffff";
+					hof.style.color = "#ffffff";
 					break;
 				case 2:
 					right.style.backgroundColor = "#ffee93"; //yellow
+					lor.style.color = "#00334B";
+					hof.style.color = "#00334B";
 					break;
 				case 3:
 					right.style.backgroundColor = "#adf7b6"; //green
+					lor.style.color = "#6A0000";
+					hof.style.color = "#6A0000";
 					break;
 			}
 			
